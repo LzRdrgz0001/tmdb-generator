@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TMDB Generator</title>
+  <!-- Vincula el CSS, ajusta la ruta si tu carpeta css está fuera -->
+  <link rel="stylesheet" href="../css/config.css" />
+  <style>
+  /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.max-width {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ff6f61;
+  text-shadow: 0 0 5px #ff6f61a0;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.option {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 150px;
+  text-decoration: none;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option__icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.option__name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.option:hover {
+  background-color: #ff6f61;
+  color: white;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px #ff6f61cc;
+}
+
+@media (max-width: 480px) {
+  .option {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="max-width">
+    <h1>Generador LzPlay!
+	</h1>
+
+ <div class="options">
+  <a href="peliculas/index.html" class="option">
+    <div class="option__icon">🎬</div>
+    <div class="option__name">Películas Y Series</div>
+  </a>
+  <a href="posters/index.html" class="option">
+    <div class="option__icon">🖼️</div>
+    <div class="option__name">Posters</div>
+  </a>
+</div>
+
+
+  <script src="generator.js" defer></script>
+</body>
+
+</html>
