@@ -16,14 +16,21 @@
   --dark2: #222;
 }
 
-body {
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: #000;
 }
 
+
+
 .generator {
-  display: grid;
-  grid-template-columns: 400px 1fr;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+
 
 .get-data {
   padding: 20px;
@@ -161,4 +168,51 @@ button {
 
 .fa-arrow-left-long {
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .generator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .get-data {
+    border-right: none;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tipo,
+  .bs-data-values {
+    grid-template-columns: 1fr;
+  }
+
+  .data-preview {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .data-preview img {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .back-to {
+    justify-content: center;
+    text-align: center;
+  }
+
+  input[type="submit"],
+  button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .html-final {
+    height: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
 }
